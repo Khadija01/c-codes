@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int N;
+    cin>>N;
+    while(N--)
+    {
+        int M;
+        cin>>M;
+        map<string,double>mp;
+        for(int i =0; i<M; i++)
+        {
+            string s;
+            double x;
+            cin>>s>>x;
+            mp[s] = x;
+        }
+        int P;
+        double sum = 0.00;
+        cin>>P;
+        for(int j=0; j<P; j++)
+        {
+            string s1; int y;
+            cin>>s1>>y;
+            sum = sum + (y*mp[s1]);
+        }
+        printf("R$ %0.2lf\n",sum);
+    }
+    return 0;
+
+    }
